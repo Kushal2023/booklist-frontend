@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.register,.login{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}
+
+.register_main-div{
+  width: 20%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+  
+}
+
+.register_username__input,.register_password__input,.register_confirm_password__input{
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid brown;
+}
+
+.register_title{
+  color: white;
+}
+
+.register_button,.login_button{
+  padding: 7px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid brown;
+}
+
+.register_button:hover{
+  background-color: #6d6de4;
+  color: white;
+}
+
+.login{
+  background-color: #6d6de4;
+}
+
+.login_button{
+  border: 1px solid #6d6de4;
+}
+
+.login_button:disabled{
+  cursor: none;
+}
+
+.login_button:hover{
+  background-color: brown;
+  color: white;
+}
+
+.homepage{
+  width: 100vw;
+  background-color: rgba(15, 15, 34, 0.945);
+  color: white;
+}
+
+.homepage_main-div{
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.books-div{
+  width: 100%;
+}
+
+.books{
+  display: grid;
+  grid-gap:2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+
+.homepage_title{
+  font-size: 45px;
+}
+
+.add-new-button{
+  margin: 20px 0;
+  padding: 7px 15px;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.book{
+  border: 1px solid black;
+}
+
+.book-image{
+  width: 100%;
+  object-fit: cover;
+}
+
+.description{
+  padding: 10px 10px 20px 10px;
+}
+
+.book-title{
+  padding-bottom: 10px;
+  color: blue;
+}
+
+.book-author{
+  padding-bottom: 10px;
+  color: gray;
+}
+
+.book-genre{
+  color: white;
+}
+
+.logout-button{
+  padding: 7px 15px;
+  cursor: pointer;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.addbook{
+  background-color:rgba(15, 15, 34, 0.945) ;
+}
+
+.main-add-book{
+  width: 30%;
+}
+
+.main-add-book-title{
+  font-size: 50px;
+}
+
+.book-record{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 15, 34, 0.945);
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-record-main-div{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-record_title{
+  font-size: 50px;
+  padding-bottom: 30px;
+}
+
+.title,.desc,.isbn,.author,.publisher{
+  display: flex;
+  padding: 15px 0;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.buttons{
+  display: flex;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.book-record-delete,.book-record-edit{
+  font-size: 18px;
+  padding: 7px 15px;
+  cursor: pointer;
+}
