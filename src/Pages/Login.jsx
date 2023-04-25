@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const [error1, setError1] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
   const [loginFormData,setLoginFormData] = useState({
     username:"",
     password:""
@@ -12,7 +14,12 @@ const Login = () => {
   const { isFetching, error } = useSelector((state) => state.booklistuser);
 
   const loginFormHandler = async (formData) =>{
-    login(dispatch,{username:formData.username,password:formData.password})
+    if(formData.username === "" || formData.password === ""){
+      setError1(true);
+      setErrorMsg("Please fill all the field");
+    }else{
+      login(dispatch,{username:formData.username,password:formData.password})
+    }
   }
 
   return (
@@ -46,6 +53,7 @@ const Login = () => {
           >
             Register
           </Link>
+        {!error && error1 && <div style={{ color: "red" }}>{errorMsg}</div> }
         {error && <div style={{ color: "red" }}>Something went wrong</div>}
       </div>
     </div>
